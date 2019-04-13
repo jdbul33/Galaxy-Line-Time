@@ -40,11 +40,42 @@
 	
 	\section{Data}
 	
-	The data for this analysis consist of 88 data points spanning 2012-2019 for Google searches for the ``Samsung Galaxy" product line.  Each point is a monthly search index level ranging from 2014 to 2019.  The data is freely available at the Google Trends site by following \href{https://trends.google.com/trends/explore?q=\%2Fm\%2F0hnbsn3\&geo=US}{this link}.
+	The data for this analysis consist of 76 data points spanning 2013-2019 for Google searches for the ``Samsung Galaxy" product line.\cite{data}  Each point represents a monthly search ``index" level as calculated by Google.  The data is freely available at the Google Trends site by following \href{https://trends.google.com/trends/explore?q=\%2Fm\%2F0hnbsn3\&geo=US}{this link}.  For this analysis, the data will be split into the first 64 points (for model estimation) and the remaining final 12 points (for forecast analysis).  These two subsets of the data can be seen in their entirety in Appendices A \& B.
+	
+	\section{Preliminary Analysis}
+	
+	The entire data set, plotted over time, can be seen in Figure 1.
+	
+\begin{figure}
+		\includegraphics[scale=.7]{All_Plot.png}
+		\caption{Samsung Galaxy search levels, 01/2013-04/2019}
+\end{figure}
+
+	
+\paragraph{Trend}
+
+	Upon examining the plot of the data, a clear downward trend can be seen, especially in the years 2015-2017.  This trend appears to level off both early and late in this time series.
+
+\paragraph{Seasonality}
+
+	This data does contain seasonality, with spikes occurring annually in March and September, as well as during the holiday season.  March and September are historically release times for the Galaxy S and Galaxy Note devices, so an increased search interest is expected around those times.  Furthermore, being a consumer-centric product, an increase in interest around the holidays is to be expected.
+
+\paragraph{Nonstationarity}
+	
+	This data does not appear to be particularly nonstationary.  The standardized monthly data levels partially prevent this; additionally, the current trajectory does not appear to be heading towards either $ \infty $ or $ -\infty $.  However, upon conducting the Dickey-Fuller test prior to model specification, a difference may still need to be taken to ensure stationarity.
 	
 
+\paragraph{Outliers}
+
+	No outliers exist in this data sample.  The search index levels are standardized by Google on a scale from 1-100; as a result, all of the data points fall within this range.  No outlier treatment is necessary prior to analysis of this data.
+
 \newpage
-\begin{thebibliography}{3}
+\begin{thebibliography}{1}
+	
+		
+	\bibitem{data}
+	Google Trends. (2019). \textit{Samsung Galaxy: Product Line} [Data file]. Retrieved from https://trends.google.com/trends/explore?q=\%2Fm\%2F0hnbsn3\&geo=US.
+	
 	
 	
 \end{thebibliography}
